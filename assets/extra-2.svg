@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" shape-rendering="crispEdges" font-family="'Press Start 2P', monospace">
+  <rect width="500" height="600" fill="#faf6ea"/>
+  <rect x="80" y="80" width="340" height="440" fill="#3E6B27" stroke="#000" stroke-width="5"/>
+  <rect x="90" y="90" width="320" height="420" fill="#5D9C3F" stroke="#000" stroke-width="3"/>
+  <text x="250" y="150" text-anchor="middle" font-size="18" fill="#fff" stroke="#000" stroke-width="3" paint-order="stroke">TABLA DE</text>
+  <text x="250" y="185" text-anchor="middle" font-size="26" fill="#f4c034" stroke="#000" stroke-width="3" paint-order="stroke">MULTIPLICAR</text>
+  <!-- table grid -->
+  <g transform="translate(130,220)">
+    <g fill="#fff" stroke="#000" stroke-width="2">
+      <rect x="0" y="0" width="60" height="60"/><rect x="70" y="0" width="60" height="60"/><rect x="140" y="0" width="60" height="60"/><rect x="210" y="0" width="60" height="60"/>
+      <rect x="0" y="70" width="60" height="60"/><rect x="70" y="70" width="60" height="60"/><rect x="140" y="70" width="60" height="60"/><rect x="210" y="70" width="60" height="60"/>
+      <rect x="0" y="140" width="60" height="60"/><rect x="70" y="140" width="60" height="60"/><rect x="140" y="140" width="60" height="60"/><rect x="210" y="140" width="60" height="60"/>
+      <rect x="0" y="210" width="60" height="60"/><rect x="70" y="210" width="60" height="60"/><rect x="140" y="210" width="60" height="60"/><rect x="210" y="210" width="60" height="60"/>
+    </g>
+    <g font-size="24" fill="#000" text-anchor="middle">
+      <text x="30" y="40">1</text><text x="100" y="40">2</text><text x="170" y="40">3</text><text x="240" y="40">4</text>
+      <text x="30" y="110">2</text><text x="100" y="110">4</text><text x="170" y="110">6</text><text x="240" y="110">8</text>
+      <text x="30" y="180">3</text><text x="100" y="180">6</text><text x="170" y="180">9</text><text x="240" y="180">12</text>
+      <text x="30" y="250">4</text><text x="100" y="250">8</text><text x="170" y="250">12</text><text x="240" y="250">16</text>
+    </g>
+  </g>
+</svg>
