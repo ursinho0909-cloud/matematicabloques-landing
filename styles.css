@@ -158,15 +158,42 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
   box-shadow:5px 5px 0 rgba(0,0,0,.35), inset 0 2px 0 rgba(255,255,255,.25);
   text-transform:uppercase;letter-spacing:.6px;
   text-shadow:2px 2px 0 #000;
-  transition:transform .12s ease, box-shadow .12s ease;
-  animation:pulse 2.2s ease-in-out infinite;
+  transition:transform .12s ease, box-shadow .12s ease, filter .2s ease;
   line-height:1.4;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  animation:cta-glow 5s ease-in-out infinite;
 }
-.cta-primary:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 rgba(0,0,0,.4), inset 0 2px 0 rgba(255,255,255,.25)}
+/* brillo que cruza el boton, con pausa larga entre ciclos */
+.cta-primary::after{
+  content:"";
+  position:absolute;
+  top:-60%;
+  left:-60%;
+  width:38%;
+  height:220%;
+  background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.42) 50%,transparent 100%);
+  transform:rotate(18deg);
+  pointer-events:none;
+  animation:cta-shine 5s ease-in-out infinite;
+}
+.cta-primary:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 rgba(0,0,0,.4), inset 0 2px 0 rgba(255,255,255,.25);animation:none}
+.cta-primary:hover::after{animation:none;opacity:0}
 .cta-primary:active{transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(0,0,0,.35)}
-@keyframes pulse{
-  0%,100%{box-shadow:5px 5px 0 rgba(0,0,0,.35), inset 0 2px 0 rgba(255,255,255,.25);}
-  50%{box-shadow:7px 7px 0 rgba(0,0,0,.45), inset 0 2px 0 rgba(255,255,255,.25);}
+
+@keyframes cta-shine{
+  0%   {left:-60%}
+  38%  {left:130%}
+  100% {left:130%}
+}
+@keyframes cta-glow{
+  0%,100%{filter:brightness(1)}
+  38%    {filter:brightness(1.07)}
+}
+@media (prefers-reduced-motion:reduce){
+  .cta-primary{animation:none}
+  .cta-primary::after{animation:none;opacity:0}
 }
 .social-proof{
   margin-top:22px;font-size:14px;color:#fff;
