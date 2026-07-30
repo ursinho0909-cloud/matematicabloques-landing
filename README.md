@@ -51,5 +51,5 @@ matematicas-minecraft-landing/
 Cloudflare Pages via `wrangler` (mesmo esquema do `caixamagica` e `treino-express-vendas`).
 
 ```bash
-wrangler pages deploy . --project-name matematicas-minecraft
+wrangler pages deploy . --project-name matematicabloques
 ```
